@@ -1,0 +1,215 @@
+:root{
+    --body-bg: rgb(53, 53, 53);
+    --container-bg: rgb(78, 78, 78);
+    --inner-wrapper-bg: rgb(36, 36, 36);
+    --minute-hand: rgba(255, 255, 255, 0.8);
+    --hour-hand: white;
+    --second-hand: rgba(255, 255, 255, 0.3);
+    --body-color: white;
+    --shadow: rgb(0, 0, 0) 0px 22px 70px 4px;
+    --innerwrapper-width: 386px;
+    --innerwrapper-height: 386px;
+    --border-lining: conic-gradient(from -45deg, white, rgb(49, 49, 49), white);
+}
+[color-theme = "light"]{
+    --body-bg: white;
+    --shadow: rgb(255, 255, 255) 0px 0px 90px;
+    --border-lining: white;
+}
+[rgb = "on"]{
+    --border-lining: conic-gradient(from 0deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    --innerwrapper-width: 380px;
+    --innerwrapper-height: 380px;
+    --rgb-animation: rgb-animation;
+}
+[red="on"]{
+    --second-hand: red;
+}
+*{
+    margin: 0px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--body-bg);
+    flex-direction: column;
+    color: var(--body-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color .5s linear;
+}   
+.container{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: var(--container-bg);
+    /* box-shadow: 0 0 100px 10px black; */
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-border{
+    height: 390px;
+    width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--border-lining);
+    transition: background 3s ease;
+    animation: var(--rgb-animation) .8s linear infinite;
+}
+@keyframes rgb-animation {
+    0%{
+        background: conic-gradient(from 0deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    10%{
+        background: conic-gradient(from 36deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    20%{
+        background: conic-gradient(from 72deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    30%{
+        background: conic-gradient(from 108deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    40%{
+        background: conic-gradient(from 144deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    50%{
+        background: conic-gradient(from 180deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    60%{
+        background: conic-gradient(from 216deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    70%{
+        background: conic-gradient(from 252deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    80%{
+        background: conic-gradient(from 286deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    90%{
+        background: conic-gradient(from 324deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+    100%{
+        background: conic-gradient(from 360deg, rgba(255,0,0,1) 0%, rgba(255,132,50,1) 20%, rgba(127,255,113,1) 43%, rgba(0,228,255,1) 67%, rgba(255,209,107,1) 85%, rgba(255,0,0,1) 100%);
+    }
+}
+.inner-wrapper{
+    background-color: var(--inner-wrapper-bg);
+    width: var(--innerwrapper-width);
+    height: var(--innerwrapper-height);
+    border-radius: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: height 1s linear, width 1s ease, color 3s ease;
+}
+.hand{
+    width: 2px;
+    position: absolute;
+    bottom: 50%;
+}
+.minute-hand{
+    background-color: var(--minute-hand);
+    height: 130px;
+    transform-origin: bottom;
+}
+.hour-hand{
+    background-color: var(--hour-hand);
+    transform-origin: bottom;
+    height: 80px;
+}
+.second-hand{
+    background-color: var(--second-hand);
+    transform-origin: bottom;
+    height: 160px;
+    transition: background-color 1s linear;
+}
+@media screen and (max-width: 500px) {
+    .container {
+        height: 80vw;
+        width: 80%;
+    }
+    .inner-border{
+        background-color: red;
+        height: calc(80vw - 4px);
+        width: calc(80vw - 4px);
+    }
+    .inner-wrapper{
+        height: calc(80vw - 8px);
+        width: calc(80vw - 8px);
+    }
+    .minute-hand{
+        height: 36%;
+    }
+    .hour-hand{
+        height: 20%;
+    }
+    .second-hand{
+        height: 40%;
+    }
+}
+.settings{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+.settings:hover .setting-menu{
+    visibility: visible;
+    opacity: 1;
+}
+.settings svg{
+    cursor: pointer;
+}
+.setting-menu{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    height: 150px;
+    border-radius: 15px;
+    padding: 0px 15px;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--container-bg);
+    transition: opacity .3s ease;
+}
+.menu-wrapper{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.theme-toggle{
+    cursor: pointer;
+    height: 20px;
+    width: 50px;
+    background-color: grey;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.theme-toggle .knob{
+    width: 25px;
+    height: 25px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    transition: transform .5s ease-out;
+}
+.theme-toggle.off{
+    background-color: rgb(161, 161, 161);
+}
+.theme-toggle.off .knob{
+    background-color: rgb(255, 122, 122);
+    transform: translateX(100%);
+}
