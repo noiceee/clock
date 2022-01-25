@@ -136,7 +136,6 @@ body{
         width: 80%;
     }
     .inner-border{
-        background-color: red;
         height: calc(80vw - 4px);
         width: calc(80vw - 4px);
     }
